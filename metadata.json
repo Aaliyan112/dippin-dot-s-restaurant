@@ -1,6 +1,0 @@
-{
-  "name": "Dippin Dot's Restaurant & Bar B Q",
-  "description": "Official online ordering platform for Dippin Dot's Restaurant & Bar B Q Sukkur. Famous for Juicy Zinger Burgers, Loaded Fries, Signature BBQ Platters, Sajji, Momos, Pizza, and Dippin' Dots Ice Cream.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

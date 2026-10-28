@@ -80,6 +80,7 @@
           <img 
             src="./logo.png" 
             alt="Dippin Dot's Logo" 
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=200&q=80';"
             class="h-14 sm:h-16 md:h-18 w-auto object-contain drop-shadow-[0_4px_16px_rgba(220,38,38,0.45)] group-hover:scale-105 transition-transform duration-300"
           />
         </a>
@@ -195,14 +196,14 @@
           <div className="relative bg-zinc-900 rounded-3xl p-5 border border-red-900/40 shadow-2xl overflow-hidden">
             <div class="flex items-center justify-between mb-3">
               <div class="flex items-center gap-2">
-                <img src="./logo.png" alt="Logo" class="h-9 w-auto" />
+                <img src="./logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=200&q=80';" alt="Logo" class="h-9 w-auto" />
                 <span class="text-xs font-black uppercase text-white">Hot Special Offer</span>
               </div>
               <span class="bg-red-600 text-white font-black text-xs px-2.5 py-1 rounded-full animate-pulse">Save Rs. 130</span>
             </div>
 
             <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-black border border-zinc-800">
-              <img src="./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM (1).jpeg" alt="Hot & Fried Burger Combo" class="w-full h-full object-cover" />
+              <img src="./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM (1).jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80';" alt="Hot & Fried Burger Combo" class="w-full h-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
                 <div>
@@ -453,6 +454,7 @@
         oldPrice: 530,
         description: "Crispy fried zinger breast fillet with spicy pickled jalapenos, creamy mayo and crisp lettuce.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.02 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
         badge: "Bestseller",
         spicy: true
       },
@@ -463,6 +465,7 @@
         oldPrice: 680,
         description: "1 Zinger Burger + 1 Crispy Fried Drumstick + Golden French Fries + Regular Chilled Cold Drink.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
         badge: "Special Combo",
         spicy: false
       },
@@ -473,6 +476,7 @@
         oldPrice: 500,
         description: "Freshly baked soft bread packed with rich mozzarella, spiced chicken, black olives and marinara.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (3).jpeg",
+        fallback: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
         badge: "Cheesy",
         spicy: false
       },
@@ -483,6 +487,7 @@
         oldPrice: 520,
         description: "A Mexican twist in every bite! Melted cheese, spiced fajita chicken, salsa and garlic dip.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.02 AM (2).jpeg",
+        fallback: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80",
         badge: "Hot",
         spicy: true
       },
@@ -493,6 +498,7 @@
         oldPrice: 480,
         description: "Mountain of hot golden fries drenched in signature cheddar sauce, shredded BBQ chicken and jalapenos.",
         image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80",
+        fallback: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80",
         badge: "Loaded",
         spicy: true
       },
@@ -503,6 +509,7 @@
         oldPrice: 800,
         description: "4 big pieces of crispy golden drumsticks served in a basket with salted french fries and garlic dip.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
         badge: "Bucket",
         spicy: false
       },
@@ -513,6 +520,7 @@
         oldPrice: 720,
         description: "Two 100% pure seasoned beef patties with melted cheddar slices, caramelized onions and secret sauce.",
         image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+        fallback: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80",
         badge: "Beef",
         spicy: false
       },
@@ -523,6 +531,7 @@
         oldPrice: 350,
         description: "Succulent marinated chicken wrapped in a crispy paratha with garlic mayo and pickled cabbage.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.56 AM (3).jpeg",
+        fallback: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
         badge: "Roll",
         spicy: false
       }
@@ -537,6 +546,7 @@
         serves: "3 - 4 Persons",
         description: "1 Large 13-Inch Pizza, 4 Crispy Wings, and 1.5 Liter Cold Drink.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
         items: ["1x Large 13\" Pizza", "4x Crispy Wings", "1.5L Soft Drink"]
       },
       {
@@ -547,6 +557,7 @@
         serves: "2 - 3 Persons",
         description: "1 Leg Tikka, 1/2 Plate Reshmi Kabab, 1/2 Malai Boti, 1/2 Red Boti, 2 Drumsticks, Rice & Sauce, 1L Drink.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.59 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
         items: ["1x Leg Tikka", "1/2 Plate Reshmi Kabab", "1/2 Plate Malai Boti", "2x Drumsticks", "Spiced Rice Platter", "1L Cold Drink"]
       },
       {
@@ -557,6 +568,7 @@
         serves: "5 - 6 Persons",
         description: "1 Chest, 1 Leg Tikka, Reshmi Kabab, Malai Boti, Red Boti, Adana Kabab, 4 Drumsticks, Rice & 1.5L Drink.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM (2).jpeg",
+        fallback: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
         items: ["1x Chest Tikka", "1x Leg Tikka", "Reshmi & Adana Kabab", "Malai & Red Boti", "4x Drumsticks", "Large Rice Platter", "1.5L Drink"]
       },
       {
@@ -567,6 +579,7 @@
         serves: "7 - 8 Persons",
         description: "Half Kg Mutton Piece, Chest & Leg Tikka, 4 types of Kabab/Boti, Rice, and Jumbo Drink.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80",
         items: ["0.5 Kg Mutton Chunk", "Chest & Leg Tikka", "Full Kabab Variety", "Grand Rice Platter", "Jumbo Cold Drink"]
       },
       {
@@ -577,6 +590,7 @@
         serves: "3 - 4 Persons",
         description: "Full Charcoal Roasted Chicken Sajji with long-grain spiced rice, raita & 1L Pepsi.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (2).jpeg",
+        fallback: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80",
         items: ["1x Full Chicken Sajji", "Flavored Rice Platter", "Mint Raita & Chutney", "1L Cold Drink"]
       },
       {
@@ -587,6 +601,7 @@
         serves: "1 - 2 Persons",
         description: "4 big pieces of crispy drumsticks with golden french fries and dips.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
         items: ["4x Crispy Drumsticks", "French Fries Basket", "Chili Garlic Dip"]
       },
       {
@@ -597,6 +612,7 @@
         serves: "4 Persons",
         description: "Fresh mutton slow-cooked with tomatoes, green chilies, ginger and live charcoal smoke.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.56 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80",
         items: ["1 Kg Mutton Karahi", "4x Hot Naan", "Raita & Salad"]
       },
       {
@@ -607,6 +623,7 @@
         serves: "4 - 5 Persons",
         description: "Authentic steam-sealed tender mutton served with flavored long grain rice.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
         items: ["1 Kg Mutton Dum Pukht", "Fragrant Rice Platter", "Special Sauce"]
       },
       {
@@ -617,6 +634,7 @@
         serves: "3 - 4 Persons",
         description: "13-inch jumbo pizza with double toppings, extra cheese, and garlic sauce.",
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.03 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
         items: ["1x 13\" Large Loaded Pizza", "Dip Sauce"]
       }
     ];
@@ -627,6 +645,7 @@
         name: "Dippin' BBQ Momo's",
         price: 450,
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=800&q=80",
         desc: "Steamed chicken dumplings glazed in spicy smoky BBQ sauce with red chili dip."
       },
       {
@@ -634,6 +653,7 @@
         name: "Dippin' Kurkure Momo's",
         price: 450,
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM (1).jpeg",
+        fallback: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
         desc: "Crispy outside, juicy inside! Dumplings coated in seasoned crunchy kurkure crumb."
       },
       {
@@ -641,6 +661,7 @@
         name: "Dippin' Afghani Malai Momo's",
         price: 550,
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM (2).jpeg",
+        fallback: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&q=80",
         desc: "Steamed dumplings tossed in rich cashew cream and yogurt sauce with fresh coriander."
       },
       {
@@ -648,6 +669,7 @@
         name: "Authentic Steamed Momo's",
         price: 400,
         image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM.jpeg",
+        fallback: "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=800&q=80",
         desc: "Traditional bamboo-steamed dumplings served with spicy tomato sesame chutney."
       }
     ];
@@ -668,7 +690,7 @@
       container.innerHTML = FEATURED_ITEMS.map((item, idx) => `
         <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-red-600/60 shadow-lg transition-all flex flex-col justify-between group">
           <div class="relative aspect-[4/3] bg-black overflow-hidden">
-            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="${item.image}" onerror="this.onerror=null; this.src='${item.fallback}'" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             <span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">${item.badge}</span>
             <div class="absolute bottom-2.5 right-2.5 bg-black/90 px-2.5 py-1 rounded-lg border border-red-900/50">
               <span class="text-white font-black text-base">Rs. ${item.price}</span>
@@ -693,7 +715,7 @@
       container.innerHTML = DEALS.map(deal => `
         <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600 shadow-xl transition-all flex flex-col justify-between group">
           <div class="relative aspect-[4/3] bg-black overflow-hidden">
-            <img src="${deal.image}" alt="${deal.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="${deal.image}" onerror="this.onerror=null; this.src='${deal.fallback}'" alt="${deal.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-3 left-3 flex gap-2">
               <span class="bg-red-600 text-white text-xs font-black px-2.5 py-1 rounded-lg">Deal</span>
               <span class="bg-black/80 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg">${deal.serves}</span>
@@ -724,7 +746,7 @@
       container.innerHTML = MOMOS.map(m => `
         <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-red-600 p-4 space-y-3 group">
           <div class="relative aspect-square rounded-xl overflow-hidden bg-black">
-            <img src="${m.image}" alt="${m.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            <img src="${m.image}" onerror="this.onerror=null; this.src='${m.fallback}'" alt="${m.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
             <span class="absolute bottom-2 right-2 bg-black/90 text-white font-black px-2 py-1 rounded text-sm">Rs. ${m.price}</span>
           </div>
           <div>
@@ -743,7 +765,7 @@
       container.innerHTML = DIPPIN_DOTS.map(d => `
         <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500 p-4 space-y-3 group text-center">
           <div class="relative aspect-square rounded-xl overflow-hidden bg-black">
-            <img src="${d.img}" alt="${d.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            <img src="${d.img}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80'" alt="${d.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
             <span class="absolute bottom-2 right-2 bg-black/90 text-amber-400 font-black px-2 py-1 rounded text-xs">Rs. ${d.price}</span>
           </div>
           <h4 class="font-bold text-white text-sm">${d.name}</h4>
@@ -760,7 +782,7 @@
       container.innerHTML = menuItems.map(item => `
         <div class="bg-zinc-900 rounded-2xl p-4 border border-zinc-800 space-y-3">
           <div class="aspect-[4/3] rounded-xl overflow-hidden bg-black relative">
-            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" />
+            <img src="${item.image}" onerror="this.onerror=null; this.src='${item.fallback || 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80'}'" alt="${item.name}" class="w-full h-full object-cover" />
             <span class="absolute bottom-2 right-2 bg-black/90 text-white font-black text-sm px-2 py-0.5 rounded">Rs. ${item.price}</span>
           </div>
           <h4 class="font-bold text-white text-sm">${item.name}</h4>
