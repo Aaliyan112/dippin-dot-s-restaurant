@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dippin Dot's Restaurant & Bar B Q | Sukkur</title>
+  <meta name="description" content="Official website for Dippin Dot's Restaurant & Bar B Q Sukkur. Famous for Juicy Zinger Burgers, Loaded Fries, Signature BBQ Platters, Sajji, Momos, Pizza, and Dippin' Dots Ice Cream." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#dc2626',
+              darkRed: '#991b1b',
+              amber: '#f59e0b',
+              black: '#09090b',
+              card: '#121215',
+              cardBorder: '#27272a'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #09090b;
+      color: #f4f4f5;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white selection:bg-red-600 selection:text-white pb-20 lg:pb-0">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-40 w-full bg-zinc-950/95 backdrop-blur-md border-b border-red-950/60 shadow-lg shadow-black/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Logo Image Only -->
+        <a href="#home" class="flex items-center cursor-pointer group">
+          <img 
+            src="./logo.png" 
+            alt="Dippin Dot's Logo" 
+            class="h-14 sm:h-16 md:h-18 w-auto object-contain drop-shadow-[0_4px_16px_rgba(220,38,38,0.45)] group-hover:scale-105 transition-transform duration-300"
+          />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="#home" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors">Home</a>
+          <a href="#featured" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors">Burgers & Fries</a>
+          <a href="#deals" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors flex items-center gap-1.5">
+            All Deals
+            <span class="bg-red-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-wider animate-pulse">Hot</span>
+          </a>
+          <a href="#menu" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors">Full Menu</a>
+          <a href="#dippin_dots" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors">Dippin' Dots Ice Cream</a>
+          <a href="#contact" class="px-3.5 py-2 rounded-lg text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors">Location</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <a 
+            href="tel:03123655216" 
+            class="hidden md:flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 px-3.5 py-2 rounded-xl text-xs font-bold border border-zinc-800 transition-colors"
+          >
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-red-500"></i>
+            <span>0312 3655216</span>
+          </a>
+
+          <!-- Cart Button -->
+          <button 
+            id="openCartBtn"
+            class="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-red-950/70 border border-red-500/40 transition-all active:scale-95"
+          >
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Cart</span>
+            <span id="cartBadge" class="bg-white text-red-700 font-extrabold text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-black via-zinc-950 to-zinc-950 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/80 border border-red-700/50 text-red-300 text-xs font-bold tracking-wide">
+            <i data-lucide="flame" class="w-4 h-4 text-red-500"></i>
+            <span>ESTD 2017 • RESTAURANT & BAR B Q • SUKKUR</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+            Crispy <span class="text-red-500 underline decoration-red-600/60 decoration-wavy decoration-2">Burgers</span>, 
+            Loaded <span class="text-amber-400">Fries</span> & Charcoal BBQ!
+          </h1>
+
+          <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Craving Sukkur's crunchiest Zinger Burgers, cheesy Loaded Fries, sizzling Charcoal BBQ Platters, or freshly steamed Momos? Dippin Dot's delivers fresh and hot to your doorstep!
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="#featured" class="flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-6 py-3.5 rounded-xl font-extrabold text-sm sm:text-base shadow-xl shadow-red-950/70 border border-red-500/50 transition-all">
+              <span>Order Burgers & Fries</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+            <a href="#deals" class="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-amber-400 px-5 py-3.5 rounded-xl font-bold text-sm sm:text-base border border-amber-500/30 transition-all">
+              <i data-lucide="flame" class="w-4 h-4 text-amber-500"></i>
+              <span>View All Deals</span>
+            </a>
+
+            <a href="https://wa.me/923123655216?text=Hi%20Dippin%20Dot's,%20I%20want%20to%20order%20food" target="_blank" class="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-5 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>WhatsApp Order</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-zinc-900 max-w-xl mx-auto lg:mx-0">
+            <div class="flex items-center gap-2 text-left">
+              <i data-lucide="clock" class="w-5 h-5 text-red-500"></i>
+              <div>
+                <div class="text-xs font-bold text-white">30-45 Min</div>
+                <div class="text-[11px] text-zinc-400">Fast Delivery</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-left">
+              <i data-lucide="flame" class="w-5 h-5 text-amber-500"></i>
+              <div>
+                <div class="text-xs font-bold text-white">100% Fresh</div>
+                <div class="text-[11px] text-zinc-400">Charcoal BBQ</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-left">
+              <i data-lucide="sparkles" class="w-5 h-5 text-red-400"></i>
+              <div>
+                <div class="text-xs font-bold text-white">Dippin' Dots</div>
+                <div class="text-[11px] text-zinc-400">Ice Cream Beads</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-left">
+              <i data-lucide="map-pin" class="w-5 h-5 text-green-500"></i>
+              <div>
+                <div class="text-xs font-bold text-white">Sukkur City</div>
+                <div class="text-[11px] text-zinc-400">100ft Road IBA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Banner Visual -->
+        <div class="lg:col-span-5 relative">
+          <div className="relative bg-zinc-900 rounded-3xl p-5 border border-red-900/40 shadow-2xl overflow-hidden">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <img src="./logo.png" alt="Logo" class="h-9 w-auto" />
+                <span class="text-xs font-black uppercase text-white">Hot Special Offer</span>
+              </div>
+              <span class="bg-red-600 text-white font-black text-xs px-2.5 py-1 rounded-full animate-pulse">Save Rs. 130</span>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-black border border-zinc-800">
+              <img src="./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM (1).jpeg" alt="Hot & Fried Burger Combo" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                <div>
+                  <span class="text-amber-400 text-xs font-bold block">Hot & Fried Zinger Combo</span>
+                  <span class="text-white font-black text-2xl">Rs. 550 <span class="text-xs text-zinc-400 line-through">Rs. 680</span></span>
+                </div>
+                <a href="#deals" class="bg-red-600 hover:bg-red-500 text-white text-xs font-extrabold px-3.5 py-2 rounded-lg">View Deals</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 1. HOME 8 FEATURED CARDS ================= -->
+  <section id="featured" class="py-16 sm:py-20 bg-zinc-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/70 border border-red-800/40 text-red-400 text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="flame" class="w-3.5 h-3.5 text-red-500"></i>
+            <span>Chef's Choice • Top 8 Fast Food Bestsellers</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            Featured <span class="text-red-500">Burgers</span> & Loaded <span class="text-amber-400">Fries</span>
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Selected 8 signature burgers, loaded fries and sandwiches prepared fresh with crunchy golden goodness.
+          </p>
+        </div>
+        <div class="text-xs font-bold text-zinc-400 bg-zinc-900 px-3.5 py-2 rounded-xl border border-zinc-800 self-start md:self-auto">
+          8 Exclusive Cards on Home Page
+        </div>
+      </div>
+
+      <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 8 Cards populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. ALL DEALS SECTION ================= -->
+  <section id="deals" class="py-16 sm:py-24 bg-gradient-to-b from-zinc-950 via-black to-zinc-950 border-t border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950 border border-red-600/40 text-red-400 text-xs font-black tracking-widest uppercase">
+          <i data-lucide="flame" class="w-4 h-4 text-red-500"></i>
+          <span>SPECIAL MEGA OFFERS & FAMILY PACKS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          All Exclusive <span class="text-red-500">Deals</span> & Platters
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+          From Signature BBQ Platters (feeding 2 to 8 persons) to Azadi Pizza Combos, Hot & Fried Zinger bucket deals, Dum Pukht, and Chicken Sajji.
+        </p>
+      </div>
+
+      <div id="dealsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- All deals populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. MOMOS SHOWCASE ================= -->
+  <section class="py-16 sm:py-20 bg-zinc-950 border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-950/80 border border-red-700/50 text-red-400 text-xs font-bold uppercase">
+          <i data-lucide="soup" class="w-3.5 h-3.5"></i>
+          <span>Trending in Sukkur</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white">
+          Dippin's Special <span class="text-red-500">Momo's</span>
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm">
+          Freshly steamed dumplings, crispy fried kurkure momos, rich afghani cream momos, and spicy BBQ glazed momos!
+        </p>
+      </div>
+
+      <div id="momosGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4 Momos Cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. FULL CATEGORIZED MENU ================= -->
+  <section id="menu" class="py-16 sm:py-24 bg-zinc-950 border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+          Explore Our <span class="text-red-500">Full Menu</span>
+        </h2>
+        <p class="text-zinc-400 text-sm">Browse all food categories, find your favorite dishes, and order online.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="categoryPills" class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Menu Grid -->
+      <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. DIPPIN' DOTS ICE CREAM ================= -->
+  <section id="dippin_dots" class="py-16 sm:py-24 bg-gradient-to-b from-black via-zinc-950 to-black border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-xs font-black uppercase">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+          <span>ORIGINAL FLASH-FROZEN BEADS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+          The World Famous <span class="text-red-500">Dippin' Dots</span> Ice Cream
+        </h2>
+        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+          Cryogenically flash-frozen at -40°C into delightful little ice cream beads that burst with creamy sweetness on your tongue. The perfect sweet ending to your meal!
+        </p>
+      </div>
+
+      <div id="dippinDotsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <!-- Ice cream beads -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. REVIEWS & LOCATION ================= -->
+  <section id="contact" class="py-16 sm:py-24 bg-zinc-950 border-b border-red-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-r from-zinc-900 via-zinc-950 to-zinc-900 rounded-3xl border border-red-900/40 p-6 sm:p-10 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <span class="text-xs font-black uppercase tracking-widest text-red-500 block">Dine-In, Takeaway & Home Delivery</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">Dippin Dot's Restaurant & Bar B Q</h3>
+              <p class="text-xs text-amber-400 font-semibold">Estd. 2017 • Sukkur, Sindh</p>
+            </div>
+
+            <div class="space-y-4 text-sm text-zinc-300">
+              <div class="flex items-start gap-3.5">
+                <i data-lucide="map-pin" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h5 class="font-bold text-white text-sm">Restaurant Address:</h5>
+                  <p class="text-zinc-400 text-xs mt-0.5">Near IBA University, 100ft Road, Sukkur, Sindh, Pakistan</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <i data-lucide="clock" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h5 class="font-bold text-white text-sm">Opening Hours:</h5>
+                  <p class="text-zinc-400 text-xs mt-0.5">12:00 PM Afternoon to 02:00 AM Midnight (Open Daily)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <i data-lucide="phone" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h5 class="font-bold text-white text-sm">Order Hotline & WhatsApp:</h5>
+                  <p class="text-white font-extrabold text-sm mt-0.5">0312 3655216</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="bg-zinc-950 p-6 rounded-2xl border border-zinc-800 text-center space-y-3">
+              <i data-lucide="bike" class="w-10 h-10 text-red-500 mx-auto"></i>
+              <h4 class="font-black text-lg text-white">Sukkur Home Delivery</h4>
+              <p class="text-xs text-zinc-400">Covering IBA Campus, 100ft Road, Military Road, Minara Road, Airport Road, and all Sukkur City areas.</p>
+              <a href="tel:03123655216" class="inline-block bg-red-600 hover:bg-red-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl">Call 0312 3655216</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black text-white border-t border-zinc-900 pt-14 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="./logo.png" alt="Logo" class="h-14 w-auto object-contain" />
+        <div>
+          <span class="font-black text-xl text-white block">DIPPIN <span class="text-red-500">DOT'S</span></span>
+          <span class="text-xs text-amber-500 uppercase tracking-widest block font-bold">Restaurant & Bar B Q • Sukkur</span>
+        </div>
+      </div>
+      <p class="text-xs text-zinc-500">© 2026 Dippin Dot's Restaurant & Bar B Q. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-full max-w-md bg-zinc-950 border-l border-zinc-800 h-full flex flex-col shadow-2xl text-white relative">
+      <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/50">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-red-500"></i>
+          <h3 class="font-black text-lg text-white">Your Cart</h3>
+        </div>
+        <button id="closeCartBtn" class="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3">
+        <!-- Cart Items -->
+      </div>
+
+      <div class="p-5 border-t border-zinc-800 bg-zinc-950 space-y-3">
+        <div class="flex justify-between text-sm">
+          <span class="text-zinc-400">Subtotal</span>
+          <span id="cartSubtotal" class="font-bold text-white">Rs. 0</span>
+        </div>
+        <div class="flex justify-between text-base font-black border-t border-zinc-800 pt-2">
+          <span>Total</span>
+          <span id="cartTotal" class="text-red-500">Rs. 0</span>
+        </div>
+
+        <a id="cartWhatsAppBtn" href="#" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Order via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Menu Data
+    const FEATURED_ITEMS = [
+      {
+        id: 'feat-1',
+        name: "Dippin's Helepeno Zinger Burger",
+        price: 470,
+        oldPrice: 530,
+        description: "Crispy fried zinger breast fillet with spicy pickled jalapenos, creamy mayo and crisp lettuce.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.02 AM (1).jpeg",
+        badge: "Bestseller",
+        spicy: true
+      },
+      {
+        id: 'feat-2',
+        name: "Hot & Fried Zinger Combo",
+        price: 550,
+        oldPrice: 680,
+        description: "1 Zinger Burger + 1 Crispy Fried Drumstick + Golden French Fries + Regular Chilled Cold Drink.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM (1).jpeg",
+        badge: "Special Combo",
+        spicy: false
+      },
+      {
+        id: 'feat-3',
+        name: "Dippin' Special Pizza Sandwich",
+        price: 450,
+        oldPrice: 500,
+        description: "Freshly baked soft bread packed with rich mozzarella, spiced chicken, black olives and marinara.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (3).jpeg",
+        badge: "Cheesy",
+        spicy: false
+      },
+      {
+        id: 'feat-4',
+        name: "A Mexican Twist Sandwich",
+        price: 450,
+        oldPrice: 520,
+        description: "A Mexican twist in every bite! Melted cheese, spiced fajita chicken, salsa and garlic dip.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.02 AM (2).jpeg",
+        badge: "Hot",
+        spicy: true
+      },
+      {
+        id: 'feat-5',
+        name: "Loaded Cheesy BBQ Chicken Fries",
+        price: 420,
+        oldPrice: 480,
+        description: "Mountain of hot golden fries drenched in signature cheddar sauce, shredded BBQ chicken and jalapenos.",
+        image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80",
+        badge: "Loaded",
+        spicy: true
+      },
+      {
+        id: 'feat-6',
+        name: "Crunch Bucket with Golden Fries",
+        price: 600,
+        oldPrice: 800,
+        description: "4 big pieces of crispy golden drumsticks served in a basket with salted french fries and garlic dip.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (1).jpeg",
+        badge: "Bucket",
+        spicy: false
+      },
+      {
+        id: 'feat-7',
+        name: "Dippin' Double Smash Beef Burger",
+        price: 620,
+        oldPrice: 720,
+        description: "Two 100% pure seasoned beef patties with melted cheddar slices, caramelized onions and secret sauce.",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+        badge: "Beef",
+        spicy: false
+      },
+      {
+        id: 'feat-8',
+        name: "Dippin Special Shawarma Roll with Fries",
+        price: 300,
+        oldPrice: 350,
+        description: "Succulent marinated chicken wrapped in a crispy paratha with garlic mayo and pickled cabbage.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.56 AM (3).jpeg",
+        badge: "Roll",
+        spicy: false
+      }
+    ];
+
+    const DEALS = [
+      {
+        id: 'deal-azadi',
+        name: "Azadi Mega Feast Deal",
+        price: 1499,
+        oldPrice: 1950,
+        serves: "3 - 4 Persons",
+        description: "1 Large 13-Inch Pizza, 4 Crispy Wings, and 1.5 Liter Cold Drink.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM.jpeg",
+        items: ["1x Large 13\" Pizza", "4x Crispy Wings", "1.5L Soft Drink"]
+      },
+      {
+        id: 'deal-p1',
+        name: "Signature BBQ Platter 1",
+        price: 1700,
+        oldPrice: 2100,
+        serves: "2 - 3 Persons",
+        description: "1 Leg Tikka, 1/2 Plate Reshmi Kabab, 1/2 Malai Boti, 1/2 Red Boti, 2 Drumsticks, Rice & Sauce, 1L Drink.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.59 AM.jpeg",
+        items: ["1x Leg Tikka", "1/2 Plate Reshmi Kabab", "1/2 Plate Malai Boti", "2x Drumsticks", "Spiced Rice Platter", "1L Cold Drink"]
+      },
+      {
+        id: 'deal-p2',
+        name: "Signature BBQ Platter 2",
+        price: 2499,
+        oldPrice: 2800,
+        serves: "5 - 6 Persons",
+        description: "1 Chest, 1 Leg Tikka, Reshmi Kabab, Malai Boti, Red Boti, Adana Kabab, 4 Drumsticks, Rice & 1.5L Drink.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM (2).jpeg",
+        items: ["1x Chest Tikka", "1x Leg Tikka", "Reshmi & Adana Kabab", "Malai & Red Boti", "4x Drumsticks", "Large Rice Platter", "1.5L Drink"]
+      },
+      {
+        id: 'deal-p3',
+        name: "Signature Royal BBQ Platter 3",
+        price: 3999,
+        oldPrice: 4850,
+        serves: "7 - 8 Persons",
+        description: "Half Kg Mutton Piece, Chest & Leg Tikka, 4 types of Kabab/Boti, Rice, and Jumbo Drink.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM (1).jpeg",
+        items: ["0.5 Kg Mutton Chunk", "Chest & Leg Tikka", "Full Kabab Variety", "Grand Rice Platter", "Jumbo Cold Drink"]
+      },
+      {
+        id: 'deal-sajji',
+        name: "Dippin Special Chicken Sajji with Rice",
+        price: 1999,
+        oldPrice: 2400,
+        serves: "3 - 4 Persons",
+        description: "Full Charcoal Roasted Chicken Sajji with long-grain spiced rice, raita & 1L Pepsi.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (2).jpeg",
+        items: ["1x Full Chicken Sajji", "Flavored Rice Platter", "Mint Raita & Chutney", "1L Cold Drink"]
+      },
+      {
+        id: 'deal-crunch',
+        name: "Crunch Bucket Deal",
+        price: 600,
+        oldPrice: 800,
+        serves: "1 - 2 Persons",
+        description: "4 big pieces of crispy drumsticks with golden french fries and dips.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.58 AM (1).jpeg",
+        items: ["4x Crispy Drumsticks", "French Fries Basket", "Chili Garlic Dip"]
+      },
+      {
+        id: 'deal-koyla',
+        name: "Mutton Koyla Karahi (1 Kg)",
+        price: 3200,
+        oldPrice: 3600,
+        serves: "4 Persons",
+        description: "Fresh mutton slow-cooked with tomatoes, green chilies, ginger and live charcoal smoke.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.56 AM.jpeg",
+        items: ["1 Kg Mutton Karahi", "4x Hot Naan", "Raita & Salad"]
+      },
+      {
+        id: 'deal-dumpukht',
+        name: "Mutton Dum Pukht with Rice",
+        price: 3800,
+        oldPrice: 4200,
+        serves: "4 - 5 Persons",
+        description: "Authentic steam-sealed tender mutton served with flavored long grain rice.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.34.57 AM.jpeg",
+        items: ["1 Kg Mutton Dum Pukht", "Fragrant Rice Platter", "Special Sauce"]
+      },
+      {
+        id: 'deal-large-pizza',
+        name: "Large Pizza Deal",
+        price: 1300,
+        oldPrice: 1500,
+        serves: "3 - 4 Persons",
+        description: "13-inch jumbo pizza with double toppings, extra cheese, and garlic sauce.",
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.03 AM.jpeg",
+        items: ["1x 13\" Large Loaded Pizza", "Dip Sauce"]
+      }
+    ];
+
+    const MOMOS = [
+      {
+        id: 'momo-1',
+        name: "Dippin' BBQ Momo's",
+        price: 450,
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM.jpeg",
+        desc: "Steamed chicken dumplings glazed in spicy smoky BBQ sauce with red chili dip."
+      },
+      {
+        id: 'momo-2',
+        name: "Dippin' Kurkure Momo's",
+        price: 450,
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM (1).jpeg",
+        desc: "Crispy outside, juicy inside! Dumplings coated in seasoned crunchy kurkure crumb."
+      },
+      {
+        id: 'momo-3',
+        name: "Dippin' Afghani Malai Momo's",
+        price: 550,
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.00 AM (2).jpeg",
+        desc: "Steamed dumplings tossed in rich cashew cream and yogurt sauce with fresh coriander."
+      },
+      {
+        id: 'momo-4',
+        name: "Authentic Steamed Momo's",
+        price: 400,
+        image: "./menu-assets/WhatsApp Image 2026-10-28 at 3.35.01 AM.jpeg",
+        desc: "Traditional bamboo-steamed dumplings served with spicy tomato sesame chutney."
+      }
+    ];
+
+    const DIPPIN_DOTS = [
+      { name: "Rainbow Ice", price: 380, img: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80" },
+      { name: "Cookies 'n Cream", price: 400, img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" },
+      { name: "Banana Split Beads", price: 420, img: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=600&q=80" },
+      { name: "Cotton Candy", price: 390, img: "https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=600&q=80" },
+      { name: "Choc Chip Cookie Dough", price: 420, img: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80" }
+    ];
+
+    // Cart State
+    let cart = [];
+
+    function renderFeatured() {
+      const container = document.getElementById('featuredGrid');
+      container.innerHTML = FEATURED_ITEMS.map((item, idx) => `
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-red-600/60 shadow-lg transition-all flex flex-col justify-between group">
+          <div class="relative aspect-[4/3] bg-black overflow-hidden">
+            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <span class="absolute top-2.5 left-2.5 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">${item.badge}</span>
+            <div class="absolute bottom-2.5 right-2.5 bg-black/90 px-2.5 py-1 rounded-lg border border-red-900/50">
+              <span class="text-white font-black text-base">Rs. ${item.price}</span>
+              <span class="text-[11px] text-zinc-400 line-through ml-1">Rs. ${item.oldPrice}</span>
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-extrabold text-white text-base group-hover:text-red-400 transition-colors">${item.name}</h3>
+              <p class="text-zinc-400 text-xs mt-1.5 line-clamp-2">${item.description}</p>
+            </div>
+            <button onclick="addToCart('${item.name}', ${item.price})" class="w-full py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl shadow-md transition-all active:scale-95">
+              + Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderDeals() {
+      const container = document.getElementById('dealsGrid');
+      container.innerHTML = DEALS.map(deal => `
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-red-600 shadow-xl transition-all flex flex-col justify-between group">
+          <div class="relative aspect-[4/3] bg-black overflow-hidden">
+            <img src="${deal.image}" alt="${deal.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="bg-red-600 text-white text-xs font-black px-2.5 py-1 rounded-lg">Deal</span>
+              <span class="bg-black/80 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-lg">${deal.serves}</span>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-black/90 px-3 py-1 rounded-lg">
+              <span class="text-white font-black text-2xl">Rs. ${deal.price}</span>
+              <span class="text-xs text-zinc-400 line-through ml-1.5">Rs. ${deal.oldPrice}</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-extrabold text-white text-lg group-hover:text-red-400 transition-colors">${deal.name}</h3>
+              <p class="text-zinc-400 text-xs mt-1">${deal.description}</p>
+              <div class="mt-3 pt-3 border-t border-zinc-800 space-y-1">
+                ${deal.items.map(it => `<div class="text-xs text-zinc-300 flex items-center gap-1.5">✓ ${it}</div>`).join('')}
+              </div>
+            </div>
+            <button onclick="addToCart('${deal.name}', ${deal.price})" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-black text-sm rounded-xl shadow-lg transition-all active:scale-95">
+              + Claim Deal
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderMomos() {
+      const container = document.getElementById('momosGrid');
+      container.innerHTML = MOMOS.map(m => `
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-red-600 p-4 space-y-3 group">
+          <div class="relative aspect-square rounded-xl overflow-hidden bg-black">
+            <img src="${m.image}" alt="${m.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            <span class="absolute bottom-2 right-2 bg-black/90 text-white font-black px-2 py-1 rounded text-sm">Rs. ${m.price}</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">${m.name}</h4>
+            <p class="text-zinc-400 text-xs mt-1">${m.desc}</p>
+          </div>
+          <button onclick="addToCart('${m.name}', ${m.price})" class="w-full py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl">
+            + Add Momo's
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function renderDippinDots() {
+      const container = document.getElementById('dippinDotsGrid');
+      container.innerHTML = DIPPIN_DOTS.map(d => `
+        <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-amber-500 p-4 space-y-3 group text-center">
+          <div class="relative aspect-square rounded-xl overflow-hidden bg-black">
+            <img src="${d.img}" alt="${d.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            <span class="absolute bottom-2 right-2 bg-black/90 text-amber-400 font-black px-2 py-1 rounded text-xs">Rs. ${d.price}</span>
+          </div>
+          <h4 class="font-bold text-white text-sm">${d.name}</h4>
+          <button onclick="addToCart('${d.name}', ${d.price})" class="w-full py-2 bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs rounded-xl">
+            + Add Beads
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function renderMenu() {
+      const menuItems = [...FEATURED_ITEMS, ...MOMOS.map(m => ({ ...m, description: m.desc }))];
+      const container = document.getElementById('menuGrid');
+      container.innerHTML = menuItems.map(item => `
+        <div class="bg-zinc-900 rounded-2xl p-4 border border-zinc-800 space-y-3">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-black relative">
+            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" />
+            <span class="absolute bottom-2 right-2 bg-black/90 text-white font-black text-sm px-2 py-0.5 rounded">Rs. ${item.price}</span>
+          </div>
+          <h4 class="font-bold text-white text-sm">${item.name}</h4>
+          <p class="text-zinc-400 text-xs line-clamp-2">${item.description}</p>
+          <button onclick="addToCart('${item.name}', ${item.price})" class="w-full py-2 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl">
+            + Add to Cart
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // Cart Functions
+    function addToCart(name, price) {
+      const existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      openCart();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((acc, i) => acc + i.qty, 0);
+      const subtotal = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+      
+      document.getElementById('cartBadge').innerText = totalCount;
+      document.getElementById('cartSubtotal').innerText = 'Rs. ' + subtotal;
+      document.getElementById('cartTotal').innerText = 'Rs. ' + subtotal;
+
+      const list = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        list.innerHTML = `<div class="text-center text-zinc-500 py-10 text-sm">Your cart is empty</div>`;
+      } else {
+        list.innerHTML = cart.map(i => `
+          <div class="bg-zinc-900 p-3 rounded-xl border border-zinc-800 flex items-center justify-between text-xs">
+            <div>
+              <div class="font-bold text-white">${i.name}</div>
+              <div class="text-zinc-400">Rs. ${i.price} x ${i.qty} = Rs. ${i.price * i.qty}</div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="changeQty('${i.name}', -1)" class="w-6 h-6 rounded bg-zinc-800 text-white">-</button>
+              <span class="font-bold">${i.qty}</span>
+              <button onclick="changeQty('${i.name}', 1)" class="w-6 h-6 rounded bg-zinc-800 text-white">+</button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Update WhatsApp link
+      let waText = "*Order from Dippin Dot's Sukkur*\n";
+      cart.forEach((i, idx) => {
+        waText += `${idx+1}. ${i.qty}x ${i.name} - Rs. ${i.price * i.qty}\n`;
+      });
+      waText += `\n*Total Amount:* Rs. ${subtotal}`;
+      document.getElementById('cartWhatsAppBtn').href = `https://wa.me/923123655216?text=${encodeURIComponent(waText)}`;
+    }
+
+    function changeQty(name, delta) {
+      const item = cart.find(i => i.name === name);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.name !== name);
+      }
+      updateCartUI();
+    }
+
+    function openCart() {
+      document.getElementById('cartDrawerBackdrop').classList.remove('hidden');
+    }
+
+    function closeCart() {
+      document.getElementById('cartDrawerBackdrop').classList.add('hidden');
+    }
+
+    document.getElementById('openCartBtn').addEventListener('click', openCart);
+    document.getElementById('closeCartBtn').addEventListener('click', closeCart);
+    document.getElementById('cartDrawerBackdrop').addEventListener('click', (e) => {
+      if (e.target.id === 'cartDrawerBackdrop') closeCart();
+    });
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeatured();
+      renderDeals();
+      renderMomos();
+      renderDippinDots();
+      renderMenu();
+      updateCartUI();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
